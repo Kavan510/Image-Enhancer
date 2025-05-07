@@ -23,7 +23,7 @@ const ImageUpload = (props) => {
           onChange={ShowImageHandler}
         />
         <IoMdAttach className="text-3xl text-gray-400" />
-        <p className="text-sm font-medium">Click or drag to upload image</p>
+        <p className="text-sm font-medium">Put your image here</p>
       </label>
     </div>
   );

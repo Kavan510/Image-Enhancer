@@ -6,7 +6,7 @@ const ImagePreview = (props) => {
     <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-4">
       {/* Original image */}
       <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200">
-        <h2 className="text-2xl font-bold text-center text-gray-700 py-4 bg-gray-50 border-b">Original Image</h2>
+        <h2 className="text-2xl font-bold text-center text-gray-700 py-4 bg-blue-200 border-b">Original Image</h2>
         {props.uploaded ? (
           <img
             src={props.uploaded}
@@ -22,7 +22,7 @@ const ImagePreview = (props) => {
 
       {/* Enhanced image */}
       <div className="bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-200">
-        <h2 className="text-2xl font-bold text-center text-gray-700 py-4 bg-gray-50 border-b">Enhanced Image</h2>
+        <h2 className="text-2xl font-bold text-center text-gray-700 py-4 bg-blue-200 border-b">Enhanced Image</h2>
         {props.enhanced && !props.loading && (
           <img
             src={props.enhanced}
