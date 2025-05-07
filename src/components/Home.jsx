@@ -9,23 +9,21 @@ const Home = () => {
   const [loading, setloading] = useState(false);
 
   const UploadImageHandler = async (file) => {
-    
     setUploadImage(URL.createObjectURL(file));
     setloading(true);
 
-    //call the api for image
     try {
       const enhanedURL = await enhancedImageAPI(file);
       setEnhancedImage(enhanedURL);
       setloading(false);
     } catch (e) {
-      console.log("Errror in home jsx enhanced image part");
+      console.log("Error in Home.jsx enhanced image part");
+      setloading(false);
     }
   };
-  // console.log("Enhanced image: ", enhancedImage.image);
 
   return (
-    <div className="">
+    <div className="flex flex-col items-center justify-center w-full space-y-10">
       <ImageUpload UploadImageHandler={UploadImageHandler} />
       <ImagePreview
         loading={loading}
